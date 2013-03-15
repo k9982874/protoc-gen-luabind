@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommand>D:/works/newgame/src/com/intermation/cn0001/proto/bin/protoc.exe</LocalDebuggerCommand>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommandArguments> -I=D:/works/newgame/src/com/intermation/cn0001/proto --plugin=protoc-gen-luabind=D:/works/newgame/src/com/intermation/cn0001/proto/bin/protoc-gen-luabind.exe --luabind_out=D:/works/newgame/src/com/intermation/cn0001/proto/cpp --python_out=D:/works/newgame/src/com/intermation/cn0001/proto/python D:/works/newgame/src/com/intermation/cn0001/proto/message.proto D:/works/newgame/src/com/intermation/cn0001/proto/op_code.proto D:/works/newgame/src/com/intermation/cn0001/proto/request.proto D:/works/newgame/src/com/intermation/cn0001/proto/response.proto D:/works/newgame/src/com/intermation/cn0001/proto/user.proto D:/works/newgame/src/com/intermation/cn0001/proto/town.proto D:/works/newgame/src/com/intermation/cn0001/proto/object.proto</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerWorkingDirectory>D:/works/newgame/src/com/intermation/cn0001/proto/bin</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

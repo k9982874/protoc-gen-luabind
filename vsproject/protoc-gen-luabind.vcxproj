@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{607DABF2-7D7B-44F8-A1D7-D8BD49AB9BA1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>protocgenluabind</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\protobuf-2.4.1\vsprojects;E:\protobuf-2.4.1\src;E:\protoc-gen-luabind\src;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\protobuf-2.4.1\vsprojects\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>E:\protobuf-2.4.1\vsprojects;E:\protobuf-2.4.1\src;E:\protoc-gen-luabind\src;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\protobuf-2.4.1\vsprojects\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libprotobuf.lib;libprotoc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libprotobuf.lib;libprotoc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\cpp\cpp_enum.cc" />
+    <ClCompile Include="..\src\cpp\cpp_enum_field.cc" />
+    <ClCompile Include="..\src\cpp\cpp_extension.cc" />
+    <ClCompile Include="..\src\cpp\cpp_field.cc" />
+    <ClCompile Include="..\src\cpp\cpp_file.cc" />
+    <ClCompile Include="..\src\cpp\cpp_generator.cc" />
+    <ClCompile Include="..\src\cpp\cpp_helpers.cc" />
+    <ClCompile Include="..\src\cpp\cpp_message.cc" />
+    <ClCompile Include="..\src\cpp\cpp_message_field.cc" />
+    <ClCompile Include="..\src\cpp\cpp_primitive_field.cc" />
+    <ClCompile Include="..\src\cpp\cpp_service.cc" />
+    <ClCompile Include="..\src\cpp\cpp_string_field.cc" />
+    <ClCompile Include="..\src\cpp_patch.cc" />
+    <ClCompile Include="..\src\main.cc" />
+    <ClCompile Include="..\src\plugin.cc" />
+    <ClCompile Include="..\src\plugin.pb.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\cpp\cpp_enum.h" />
+    <ClInclude Include="..\src\cpp\cpp_enum_field.h" />
+    <ClInclude Include="..\src\cpp\cpp_extension.h" />
+    <ClInclude Include="..\src\cpp\cpp_field.h" />
+    <ClInclude Include="..\src\cpp\cpp_file.h" />
+    <ClInclude Include="..\src\cpp\cpp_generator.h" />
+    <ClInclude Include="..\src\cpp\cpp_helpers.h" />
+    <ClInclude Include="..\src\cpp\cpp_message.h" />
+    <ClInclude Include="..\src\cpp\cpp_message_field.h" />
+    <ClInclude Include="..\src\cpp\cpp_primitive_field.h" />
+    <ClInclude Include="..\src\cpp\cpp_service.h" />
+    <ClInclude Include="..\src\cpp\cpp_string_field.h" />
+    <ClInclude Include="..\src\cpp_patch.h" />
+    <ClInclude Include="..\src\plugin.h" />
+    <ClInclude Include="..\src\plugin.pb.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
